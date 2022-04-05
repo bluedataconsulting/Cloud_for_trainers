@@ -1,0 +1,67 @@
+<html>
+	  <style>
+ 
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #090021;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+</style>
+   <body>
+      <form action = "http://localhost:5000/result" method = "POST">
+         <p>Name <input type = "text" name = "Name" id = "Name" /></p>
+         <p>Physics <input type = "text" name = "Physics" id = "Physics" /></p>
+         <p>Chemistry <input type = "text" name = "Chemistry" id = "Chemistry" /></p>
+         <p>Maths <input type ="text" name = "Maths" id = "Maths"/></p>
+         <p><input type = "submit" value = "submit" /></p>
+      </form>
+
+   <body>
+      <p>{{output}}</p>
+	  <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Physics</th>
+                    <th>Chemistry</th>
+                    <th>Maths</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{physics}}</td>
+                    <td>{{chemistry}}</td>
+                    <td>{{maths}}</td>
+                </tr>
+            </tbody>
+        </table>
+   </body>
+</html>
