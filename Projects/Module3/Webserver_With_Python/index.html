@@ -1,0 +1,110 @@
+<html>
+
+<style>
+    #rcorners2 {
+        border-radius: 25px;
+        border: 2px solid #090021;
+        padding: 15px;
+        width: 500px;
+        height: auto;
+    }
+
+    .button {
+        background-color: #090021;
+        border: none;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 12px;
+        margin: 4px 2px;
+        border-radius: 12px;
+    }
+
+    .styled-table {
+        border-collapse: collapse;
+        margin: 25px 0;
+        font-size: 0.9em;
+        font-family: sans-serif;
+        min-width: 400px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .styled-table thead tr {
+        background-color: #090021;
+        color: #ffffff;
+        text-align: left;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 12px 15px;
+    }
+
+    .styled-table tbody tr {
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .styled-table tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    .styled-table tbody tr:last-of-type {
+        border-bottom: 2px solid #009879;
+    }
+</style>
+
+<body>
+
+    <center>
+        <br><br><br>
+        <hr>
+        <h1>Customer Complaints</h1>
+        <hr><br>
+        <h3>Fetch:</h3>
+        <form action="/fetch" method="post" id="rcorners2">
+
+            <br>
+
+            <label for="phone">Enter Mobile number:</label><br>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <input class="button" type="submit" value="Show Details">
+            <br><br>
+
+        </form>
+        <p>{{output}}</p>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Mobile</th>
+                    <th>Name</th>
+                    <th>Geography</th>
+                    <th>Gender</th>
+                    <th>Total Units Purchased</th>
+                    <th>Last Purchased #1</th>
+                    <th>Last Purchased #2</th>
+                    <th>Last Purchased #3</th>
+                    <th>Last Complaint Received</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{mobile}}</td>
+                    <td>{{name}}</td>
+                    <td>{{geography}}</td>
+                    <td>{{gender}}</td>
+                    <td>{{tunits}}</td>
+                    <td>{{lp1}}</td>
+                    <td>{{lp2}}</td>
+                    <td>{{lp3}}</td>
+                    <td>{{complaint}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </center>
+</body>
+
+</html>
